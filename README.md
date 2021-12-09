@@ -18,6 +18,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 *  get an api key 
 
 
+## `update API key` 
+* Using the newsapi API
+* Create your developer account at https://newsapi.org/
+*  get an api key 
+*  under project folder "src/services" have file called "NewsApiService". update your API key here
+
+headers: {
+    "X-Api-Key": "your API KEY", // your API KEY
+  },
+
 ## Available Scripts
 
 In the project directory, you can run:
