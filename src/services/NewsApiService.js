@@ -11,7 +11,7 @@ const axiosInstance = axios.create({
   baseURL: `https://newsapi.org/v2/`,
   timeout: 10000,
   headers: {
-    "X-Api-Key": "2fd4106537fd4b07b27c640d50ad166b", // your API KEY
+    "X-Api-Key": "3c11e9cada6846ef8663df1a490be6b5", // your API KEY
   },
 });
 
