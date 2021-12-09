@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  NavLink,
+} from "react-router-dom";
 
-function App() {
+import TopStories from "./components/lastestNews/TopStories";
+import NavBar from "./components/NavBar/index";
+import NewStories from "./components/NewsStories/NewsStories";
+
+import Search from "./components/Search";
+import NewsState from "./context/newsState";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NewsState>
+      <Router>
+        <NavBar />
+
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <Search />
+                <NavLink to="/topstories">
+                  Go to Top Stories in Uk || US
+                </NavLink>
+              </>
+            }
+          />
+          <Route path="/topstories" element={<TopStories />} />
+
+          <Route
+            path="/search/:text"
+            element={
+              <>
+                <NavLink to="/"> Go Back </NavLink>
+                <NewStories />
+              </>
+            }
+          />
+        </Routes>
+      </Router>
+    </NewsState>
   );
-}
+};
 
 export default App;
