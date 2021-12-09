@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## `General info`
+* [Build a News App with the https://newsapi.org/ API & React JS]
+* Using React Hooks and Axios
+
+## `Built With` 
+* React JS: A JavaScript library for building user interfaces
+* Axios: promise-based HTTP client
+* Styled-component: UI framework for React 
+
+## `Features` 
+* Using the newsapi API
+* Create your developer account at https://newsapi.org/
+*  get an api key 
+
+
 ## Available Scripts
 
 In the project directory, you can run:
